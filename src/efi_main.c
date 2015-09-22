@@ -384,7 +384,7 @@ static void regist_uefi_keys(void)
 
     Print(L"Successful registration of PK, KEK and DB.\n");
 
-	transition_setup_screen(true);
+    transition_setup_screen(true);
 }
 
 static void boot_common(void)

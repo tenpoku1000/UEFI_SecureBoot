@@ -77,14 +77,14 @@ void transition_setup_screen(bool secure_boot_enable)
 
         Print(L"When you press any key, The system will transition to the UEFI setup screen.\n");
 
-		if (secure_boot_enable){
+        if (secure_boot_enable){
 
-			Print(L"After please activate the UEFI secure boot.");
+            Print(L"After please activate the UEFI secure boot.");
 
-		}else{
+        }else{
 
-			Print(L"After please clear the UEFI key.");
-		}
+            Print(L"After please clear the UEFI key.");
+        }
 
         set_boot_to_fw_ui();
 
