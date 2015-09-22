@@ -1,0 +1,1025 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdeModulePkg">
+      <UniqueIdentifier>{846b12ff-7568-466e-813e-0f2998916564}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg">
+      <UniqueIdentifier>{cf8c9a8d-7332-42cb-8904-5ed8e24e649b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MdePkg">
+      <UniqueIdentifier>{0346ad2c-5e75-45b3-8755-96798874b235}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\UefiCpuPkg">
+      <UniqueIdentifier>{3117b7df-aa32-457c-94c0-563fe7469c5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\UefiCpuPkg">
+      <UniqueIdentifier>{22b5c21c-79ba-4481-a125-f03a743c6fb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdeModulePkg\Include">
+      <UniqueIdentifier>{4661c88d-6bfb-4015-ae79-15a15c8aadf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg\Include">
+      <UniqueIdentifier>{7c79cf7c-6839-480c-9921-3e08e3abd6f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\UefiCpuPkg\Include">
+      <UniqueIdentifier>{6601587a-3d5b-4884-ad4b-0a092bad3b22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdeModulePkg\Include\Library">
+      <UniqueIdentifier>{bbd6d5ec-dff7-4fa3-8495-d4f836832649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg\Include\Library">
+      <UniqueIdentifier>{5cef95d9-1dae-4613-ad88-50cce17f29e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\UefiCpuPkg\Include\Library">
+      <UniqueIdentifier>{0f6e8b5a-a270-414e-88e8-35cb6b71d282}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\UefiCpuPkg\Include\Register">
+      <UniqueIdentifier>{49f03ff9-8b5a-4c31-ab88-59266b043863}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg\Include\Guid">
+      <UniqueIdentifier>{1a228893-22cf-480a-8cee-7a1d9a2982fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg\Include\IndustryStandard">
+      <UniqueIdentifier>{eb0c92e1-21c2-4931-9d56-07a2be654472}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg\Include\Uefi">
+      <UniqueIdentifier>{4d9cb101-9010-46bf-baae-3d5f2e8917d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg\Include\X64">
+      <UniqueIdentifier>{cde558a1-103b-42a3-a0d5-1c9dc1746626}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\PcAtChipsetPkg">
+      <UniqueIdentifier>{b91d0a95-2905-431c-94c4-b3c43c62e445}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\PcAtChipsetPkg\Library">
+      <UniqueIdentifier>{23aabc1a-45cd-45b9-9e3a-df1d682bed93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\PcAtChipsetPkg\Library\ResetSystemLib">
+      <UniqueIdentifier>{7d1c9221-3600-4b2e-ab7e-e037581a1bac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\PcAtChipsetPkg\Library\SerialIoLib">
+      <UniqueIdentifier>{0e428694-72fd-4372-ac42-89601de9d5dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\UefiCpuPkg\Library">
+      <UniqueIdentifier>{46e314b7-91bd-4b14-926f-96e86dcbc152}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\UefiCpuPkg\Library\CpuExceptionHandlerLib">
+      <UniqueIdentifier>{525cea70-d0f3-45c4-9ccb-79f6d28e7944}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\UefiCpuPkg\Library\CpuExceptionHandlerLib\X64">
+      <UniqueIdentifier>{85026f24-26a8-4691-8fc6-b2276bfbb412}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\UefiCpuPkg\Library\SecPeiDxeTimerLibUefiCpu">
+      <UniqueIdentifier>{99c85503-e132-40e7-96de-594bbed6c700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\UefiCpuPkg\Library">
+      <UniqueIdentifier>{ce67b461-9f99-45dd-aa68-9a981ed91dbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\UefiCpuPkg\Library\CpuExceptionHandlerLib">
+      <UniqueIdentifier>{9498b0ec-d9c6-4aed-97d5-b2d99d0564f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\UefiCpuPkg\Library\CpuExceptionHandlerLib\X64">
+      <UniqueIdentifier>{f47ed9ee-ad3b-41c8-b0c4-36025d81db32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg\Library">
+      <UniqueIdentifier>{3092ed68-7eb0-41ea-95e6-259e436ecf00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg\Library\BaseMemoryLib">
+      <UniqueIdentifier>{a495a80f-fe73-4f98-8417-5d220963a9a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg\Library\BaseLib">
+      <UniqueIdentifier>{b11da546-2698-4b72-bf2f-c1250ad672b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg\Library\BaseIoLibIntrinsic">
+      <UniqueIdentifier>{b5c6350e-4d72-432a-b7d1-e415b8937e5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\UefiCpuPkg\Library\BaseXApicLib">
+      <UniqueIdentifier>{b88f103d-4009-4fb6-a89e-9a11f9b1759f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg\Library\BaseSynchronizationLib">
+      <UniqueIdentifier>{d8b71dbb-5f11-4e82-ad4c-4278156c0d2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg\Library\BasePrintLib">
+      <UniqueIdentifier>{5e4c4bf8-c86f-45dc-8ce4-445419ebfdd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg\Include\Ppi">
+      <UniqueIdentifier>{15492d49-6764-4470-8655-2acc5dca86aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg\Include\Protocol">
+      <UniqueIdentifier>{4f1842b3-25e0-4db8-82b3-c0ef57307579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg\Include\Pi">
+      <UniqueIdentifier>{bca110ba-5b2b-45b2-bc2a-e157b3f014ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\OptionRomPkg">
+      <UniqueIdentifier>{ff7691c7-3cda-493b-8d02-8d6895dedf6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\OptionRomPkg">
+      <UniqueIdentifier>{706ecc72-d1d6-4a58-8487-31ecd031db5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\OptionRomPkg\Include">
+      <UniqueIdentifier>{cf59e6d3-ae1a-4153-8e48-ffdb0e02bbc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\OptionRomPkg\Include\Library">
+      <UniqueIdentifier>{f7c97a72-bbf7-47af-9a23-ee70e7a9ed0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\OptionRomPkg\Library">
+      <UniqueIdentifier>{8ca0fc37-ce37-41e3-bb50-70c0ce47be08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\OptionRomPkg\Library\FrameBufferBltLib">
+      <UniqueIdentifier>{20b53dd1-8081-4ac6-98be-21faac171c84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\CryptoPkg">
+      <UniqueIdentifier>{314b6ac5-2688-4dad-837e-bf55549e86e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\CryptoPkg\Include">
+      <UniqueIdentifier>{bb0e5c15-c09f-4a9b-9444-4252f83d7340}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\CryptoPkg\Include\Library">
+      <UniqueIdentifier>{5a4cfbae-6891-4b79-a6f4-9ee815a898eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdeModulePkg\Include\Guid">
+      <UniqueIdentifier>{6f39eb9b-7668-4ee0-91cb-afdd0d868d86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\SecurityPkg">
+      <UniqueIdentifier>{23bad397-859b-446c-b286-32cdc9286cd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\SecurityPkg">
+      <UniqueIdentifier>{d1a580ec-0ef5-4645-9d3a-adf71bedf0f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\SecurityPkg\Include">
+      <UniqueIdentifier>{4b729aaf-aff1-42c2-98a1-bc89aa5bead1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\SecurityPkg\Include\Guid">
+      <UniqueIdentifier>{569290f0-fc26-4c59-9fc1-54d46a17ae2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\SecurityPkg\Include\Library">
+      <UniqueIdentifier>{727ee8dc-4d9f-426f-a1f5-f20efda21351}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\SecurityPkg\VariableAuthenticated">
+      <UniqueIdentifier>{a30ebae2-deff-4941-bfee-f04157d37440}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\SecurityPkg\VariableAuthenticated\SecureBootConfigDxe">
+      <UniqueIdentifier>{f24d7499-15b1-40f8-8147-db9e8cd9344b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\SecurityPkg\VariableAuthenticated">
+      <UniqueIdentifier>{5cb20ca7-4ecd-4488-86ea-faff127570be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\SecurityPkg\VariableAuthenticated\SecureBootConfigDxe">
+      <UniqueIdentifier>{974af553-64c9-4943-a3bd-cfa5f9ec9238}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MdePkg\Library">
+      <UniqueIdentifier>{1559f8f5-0c13-4dac-889d-bb10569b6c85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MdePkg\Library\BaseDebugLibNull">
+      <UniqueIdentifier>{7483ed23-9d15-49ce-a7b6-325943e56db7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MdePkg\Library\BaseIoLibIntrinsic">
+      <UniqueIdentifier>{3df49349-c2ab-4bf4-b612-74a6c15e08bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MdePkg\Library\BaseLib">
+      <UniqueIdentifier>{4f49f087-d793-40ec-844c-1d0bdc43042f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MdePkg\Library\BaseMemoryLib">
+      <UniqueIdentifier>{eabb2d0b-0519-4da0-b521-e5cc2fb89221}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MdePkg\Library\BasePeCoffGetEntryPointLib">
+      <UniqueIdentifier>{e99b01cc-e586-42e5-a69d-3b560b5ca4df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MdePkg\Library\BasePrintLib">
+      <UniqueIdentifier>{f7f96a9e-7c54-49a7-afff-b2cfb3c22468}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MdePkg\Library\BaseSynchronizationLib">
+      <UniqueIdentifier>{30844ee9-5ef8-468e-82aa-7245b2591b5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MdePkg\Library\BaseSynchronizationLib\X64">
+      <UniqueIdentifier>{cef79667-bec8-4214-82f0-5d6ed2ec21c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MdePkg\Library\BaseLib\X64">
+      <UniqueIdentifier>{3297957f-f3ab-4304-a1da-9784676e2089}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MdePkg\Library\UefiBootServicesTableLib">
+      <UniqueIdentifier>{630f0f3b-344e-428d-8dd7-8383284c7c52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MdePkg\Library\UefiRuntimeServicesTableLib">
+      <UniqueIdentifier>{c8493e3d-fe95-493c-a3ba-11077c4fdaf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MdePkg\Library\UefiLib">
+      <UniqueIdentifier>{210a00c0-a789-4529-a2cc-b2e902a0b98d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MdePkg\Library\UefiLib">
+      <UniqueIdentifier>{ee7453a7-63ef-481f-ba57-b365f5c5b791}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PcAtChipsetPkg\Library\SerialIoLib\SerialPortLib.c">
+      <Filter>ソース ファイル\PcAtChipsetPkg\Library\SerialIoLib</Filter>
+    </ClCompile>
+    <ClCompile Include="PcAtChipsetPkg\Library\ResetSystemLib\ResetSystemLib.c">
+      <Filter>ソース ファイル\PcAtChipsetPkg\Library\ResetSystemLib</Filter>
+    </ClCompile>
+    <ClCompile Include="UefiCpuPkg\Library\CpuExceptionHandlerLib\CpuExceptionCommon.c">
+      <Filter>ソース ファイル\UefiCpuPkg\Library\CpuExceptionHandlerLib</Filter>
+    </ClCompile>
+    <ClCompile Include="UefiCpuPkg\Library\CpuExceptionHandlerLib\SecPeiCpuException.c">
+      <Filter>ソース ファイル\UefiCpuPkg\Library\CpuExceptionHandlerLib</Filter>
+    </ClCompile>
+    <ClCompile Include="UefiCpuPkg\Library\SecPeiDxeTimerLibUefiCpu\X86TimerLib.c">
+      <Filter>ソース ファイル\UefiCpuPkg\Library\SecPeiDxeTimerLibUefiCpu</Filter>
+    </ClCompile>
+    <ClCompile Include="UDK2014.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="UefiCpuPkg\Library\BaseXApicLib\BaseXApicLib.c">
+      <Filter>ソース ファイル\UefiCpuPkg\Library\BaseXApicLib</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionRomPkg\Library\FrameBufferBltLib\FrameBufferBltLib.c">
+      <Filter>ソース ファイル\OptionRomPkg\Library\FrameBufferBltLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SecurityPkg\VariableAuthenticated\SecureBootConfigDxe\SecureBootConfigImpl.c">
+      <Filter>ソース ファイル\SecurityPkg\VariableAuthenticated\SecureBootConfigDxe</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseSynchronizationLib\SynchronizationMsc.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseSynchronizationLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BasePrintLib\PrintLib.c">
+      <Filter>ソース ファイル\MdePkg\Library\BasePrintLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BasePrintLib\PrintLibInternal.c">
+      <Filter>ソース ファイル\MdePkg\Library\BasePrintLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BasePeCoffGetEntryPointLib\PeCoffGetEntryPoint.c">
+      <Filter>ソース ファイル\MdePkg\Library\BasePeCoffGetEntryPointLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\CompareMemWrapper.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseMemoryLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\CopyMem.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseMemoryLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\CopyMemWrapper.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseMemoryLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\MemLibGeneric.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseMemoryLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\MemLibGuid.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseMemoryLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\ScanMem8Wrapper.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseMemoryLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\ScanMem16Wrapper.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseMemoryLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\ScanMem32Wrapper.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseMemoryLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\ScanMem64Wrapper.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseMemoryLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\SetMem.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseMemoryLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\SetMem16Wrapper.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseMemoryLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\SetMem32Wrapper.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseMemoryLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\SetMem64Wrapper.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseMemoryLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\SetMemWrapper.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseMemoryLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\ZeroMemWrapper.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseMemoryLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\ARShiftU64.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\BitField.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\CheckSum.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\ChkStkGcc.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\Cpu.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\CpuDeadLoop.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\DivS64x64Remainder.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\DivU64x32.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\DivU64x32Remainder.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\DivU64x64Remainder.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\GetPowerOfTwo32.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\GetPowerOfTwo64.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\HighBitSet32.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\HighBitSet64.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\LinkedList.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\LongJump.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\LowBitSet32.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\LowBitSet64.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\LRotU32.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\LRotU64.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\LShiftU64.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\Math64.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\ModU64x32.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\MultS64x64.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\MultU64x32.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\MultU64x64.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\RRotU32.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\RRotU64.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\RShiftU64.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\SetJump.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\String.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\SwapBytes16.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\SwapBytes32.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\SwapBytes64.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\SwitchStack.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\Unaligned.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\X86DisablePaging32.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\X86DisablePaging64.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\X86EnablePaging32.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\X86EnablePaging64.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\X86FxRestore.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\X86FxSave.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\X86GetInterruptState.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\X86MemoryFence.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\X86Msr.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\X86ReadGdtr.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\X86ReadIdtr.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\X86Thunk.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\X86WriteGdtr.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseLib\X86WriteIdtr.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseIoLibIntrinsic\IoHighLevel.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseIoLibIntrinsic</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseIoLibIntrinsic\IoLib.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseIoLibIntrinsic</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseIoLibIntrinsic\IoLibMmioBuffer.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseIoLibIntrinsic</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseIoLibIntrinsic\IoLibMsc.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseIoLibIntrinsic</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\BaseDebugLibNull\DebugLib.c">
+      <Filter>ソース ファイル\MdePkg\Library\BaseDebugLibNull</Filter>
+    </ClCompile>
+    <ClCompile Include="SecurityPkg\VariableAuthenticated\SecureBootConfigDxe\SecureBootConfigMisc.c">
+      <Filter>ソース ファイル\SecurityPkg\VariableAuthenticated\SecureBootConfigDxe</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\UefiRuntimeServicesTableLib\UefiRuntimeServicesTableLib.c">
+      <Filter>ソース ファイル\MdePkg\Library\UefiRuntimeServicesTableLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\UefiBootServicesTableLib\UefiBootServicesTableLib.c">
+      <Filter>ソース ファイル\MdePkg\Library\UefiBootServicesTableLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MdePkg\Library\UefiLib\UefiLib.c">
+      <Filter>ソース ファイル\MdePkg\Library\UefiLib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MdePkg\Library\BaseLib\BaseLibInternals.h">
+      <Filter>ヘッダー ファイル\MdePkg\Library\BaseLib</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Library\BaseMemoryLib\MemLibInternals.h">
+      <Filter>ヘッダー ファイル\MdePkg\Library\BaseMemoryLib</Filter>
+    </ClInclude>
+    <ClInclude Include="UefiCpuPkg\Library\CpuExceptionHandlerLib\CpuExceptionCommon.h">
+      <Filter>ヘッダー ファイル\UefiCpuPkg\Library\CpuExceptionHandlerLib</Filter>
+    </ClInclude>
+    <ClInclude Include="UefiCpuPkg\Library\CpuExceptionHandlerLib\X64\ArchInterruptDefs.h">
+      <Filter>ヘッダー ファイル\UefiCpuPkg\Library\CpuExceptionHandlerLib\X64</Filter>
+    </ClInclude>
+    <ClInclude Include="MdeModulePkg\Include\Library\DebugAgentLib.h">
+      <Filter>ヘッダー ファイル\MdeModulePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdeModulePkg\Include\Library\ResetSystemLib.h">
+      <Filter>ヘッダー ファイル\MdeModulePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Library\BaseLib.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Library\BaseMemoryLib.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Library\DebugLib.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Library\IoLib.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Library\PcdLib.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Library\PeCoffExtraActionLib.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Library\PeCoffGetEntryPointLib.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Library\PeCoffLib.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Library\PrintLib.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Library\SerialPortLib.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Library\SynchronizationLib.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Library\TimerLib.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Guid\VectorHandoffTable.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Guid</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\IndustryStandard\PeImage.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\IndustryStandard</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\X64\ProcessorBind.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\X64</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Uefi\UefiBaseType.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Uefi</Filter>
+    </ClInclude>
+    <ClInclude Include="UefiCpuPkg\Include\Library\LocalApicLib.h">
+      <Filter>ヘッダー ファイル\UefiCpuPkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="UefiCpuPkg\Include\Register\LocalApic.h">
+      <Filter>ヘッダー ファイル\UefiCpuPkg\Include\Register</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Base.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="UDK2014.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Library\BaseIoLibIntrinsic\BaseIoLibIntrinsicInternal.h">
+      <Filter>ヘッダー ファイル\MdePkg\Library\BaseIoLibIntrinsic</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Library\BaseSynchronizationLib\BaseSynchronizationLibInternals.h">
+      <Filter>ヘッダー ファイル\MdePkg\Library\BaseSynchronizationLib</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Library\BasePrintLib\PrintLibInternal.h">
+      <Filter>ヘッダー ファイル\MdePkg\Library\BasePrintLib</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Ppi\VectorHandoffInfo.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Ppi</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\Cpu.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\DebugSupport.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Pi\PiStatusCode.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Pi</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionRomPkg\Include\Library\BltLib.h">
+      <Filter>ヘッダー ファイル\OptionRomPkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\GraphicsOutput.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Uefi.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Uefi\UefiMultiPhase.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Uefi</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Uefi\UefiSpec.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Uefi</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Guid\PcAnsi.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Guid</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Guid\WinCertificate.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Guid</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\DevicePath.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\SimpleTextIn.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\SimpleTextInEx.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\SimpleTextOut.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Uefi\UefiAcpiDataTable.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Uefi</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Uefi\UefiGpt.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Uefi</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Uefi\UefiInternalFormRepresentation.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Uefi</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Uefi\UefiPxe.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Uefi</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Guid\HiiFormMapMethodGuid.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Guid</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\IndustryStandard\Acpi.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\IndustryStandard</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\IndustryStandard\Acpi10.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\IndustryStandard</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\IndustryStandard\Acpi20.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\IndustryStandard</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\IndustryStandard\Acpi30.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\IndustryStandard</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\IndustryStandard\Acpi40.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\IndustryStandard</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\IndustryStandard\Acpi50.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\IndustryStandard</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\IndustryStandard\Acpi51.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\IndustryStandard</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\IndustryStandard\AcpiAml.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\IndustryStandard</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptoPkg\Include\Library\BaseCryptLib.h">
+      <Filter>ヘッダー ファイル\CryptoPkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\BlockIo.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\DebugPort.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\FormBrowser2.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\HiiConfigAccess.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\HiiConfigRouting.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\LoadFile.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\SimpleFileSystem.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Guid\FileInfo.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Guid</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Guid\FileSystemVolumeLabelInfo.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Guid</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Guid\HiiPlatformSetupFormset.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Guid</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Guid\ImageAuthentication.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Guid</Filter>
+    </ClInclude>
+    <ClInclude Include="MdeModulePkg\Include\Guid\MdeModuleHii.h">
+      <Filter>ヘッダー ファイル\MdeModulePkg\Include\Guid</Filter>
+    </ClInclude>
+    <ClInclude Include="MdeModulePkg\Include\Library\HiiLib.h">
+      <Filter>ヘッダー ファイル\MdeModulePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdeModulePkg\Include\Library\UefiHiiServicesLib.h">
+      <Filter>ヘッダー ファイル\MdeModulePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="SecurityPkg\Include\Guid\AuthenticatedVariableFormat.h">
+      <Filter>ヘッダー ファイル\SecurityPkg\Include\Guid</Filter>
+    </ClInclude>
+    <ClInclude Include="SecurityPkg\Include\Guid\SecureBootConfigHii.h">
+      <Filter>ヘッダー ファイル\SecurityPkg\Include\Guid</Filter>
+    </ClInclude>
+    <ClInclude Include="SecurityPkg\Include\Library\PlatformSecureLib.h">
+      <Filter>ヘッダー ファイル\SecurityPkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="SecurityPkg\VariableAuthenticated\SecureBootConfigDxe\SecureBootConfigImpl.h">
+      <Filter>ヘッダー ファイル\SecurityPkg\VariableAuthenticated\SecureBootConfigDxe</Filter>
+    </ClInclude>
+    <ClInclude Include="SecurityPkg\VariableAuthenticated\SecureBootConfigDxe\SecureBootConfigNvData.h">
+      <Filter>ヘッダー ファイル\SecurityPkg\VariableAuthenticated\SecureBootConfigDxe</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\HiiDatabase.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\HiiFont.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\HiiImage.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\HiiString.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\ComponentName.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\ComponentName2.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\DriverBinding.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\DriverConfiguration.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\DriverDiagnostics.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\DriverDiagnostics2.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Protocol\DriverConfiguration2.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Guid\GlobalVariable.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Guid</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Library\DevicePathLib.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Library\UefiBootServicesTableLib.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Library\UefiLib.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Include\Library\UefiRuntimeServicesTableLib.h">
+      <Filter>ヘッダー ファイル\MdePkg\Include\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MdePkg\Library\UefiLib\UefiLibInternal.h">
+      <Filter>ヘッダー ファイル\MdePkg\Library\UefiLib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="UefiCpuPkg\Library\CpuExceptionHandlerLib\X64\ExceptionHandlerAsm.asm">
+      <Filter>ソース ファイル\UefiCpuPkg\Library\CpuExceptionHandlerLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseSynchronizationLib\X64\InterlockedCompareExchange32.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseSynchronizationLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseSynchronizationLib\X64\InterlockedCompareExchange64.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseSynchronizationLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseSynchronizationLib\X64\InterlockedDecrement.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseSynchronizationLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseSynchronizationLib\X64\InterlockedIncrement.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseSynchronizationLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\CpuBreakpoint.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\CpuId.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\CpuIdEx.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\CpuPause.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\DisableCache.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\DisableInterrupts.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\DisablePaging64.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\EnableCache.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\EnableDisableInterrupts.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\EnableInterrupts.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\FlushCacheLine.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\FxRestore.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\FxSave.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\Invd.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\LongJumpAsm.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\Monitor.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\Mwait.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadCr0.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadCr2.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadCr3.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadCr4.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadCs.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDr0.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDr1.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDr2.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDr3.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDr4.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDr5.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDr6.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDr7.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDs.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadEflags.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadEs.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadFs.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadGdtr.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadGs.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadIdtr.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadLdtr.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMm0.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMm1.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMm2.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMm3.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMm4.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMm5.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMm6.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMm7.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMsr64.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadPmc.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadSs.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadTr.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadTsc.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\SetJumpAsm.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\SwitchStackAsm.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\Wbinvd.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteCr0.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteCr2.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteCr3.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteCr4.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteDr0.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteDr1.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteDr2.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteDr3.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteDr4.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteDr5.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteDr6.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteDr7.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteGdtr.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteIdtr.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteLdtr.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMm0.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMm1.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMm2.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMm3.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMm4.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMm5.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMm6.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMm7.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMsr64.asm">
+      <Filter>ソース ファイル\MdePkg\Library\BaseLib\X64</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12588F2-8A42-402E-8071-D28F63B94068}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>UDK2014</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.10240.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\lib\</OutDir>
+    <IntDir>$(SolutionDir)\output\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>MDEPKG_NDEBUG;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>.;.\MdeModulePkg\Include;.\MdePkg\Include;.\MdePkg\Include\X64;.\UefiCpuPkg\Include;.\UefiCpuPkg\CpuIoPei;.\UefiCpuPkg\Library\CpuExceptionHandlerLib\X64;.\UefiCpuPkg\Library\CpuExceptionHandlerLib;.\OptionRomPkg\Include;.\CryptoPkg\Include;.\SecurityPkg\Include;$(SolutionDir)\src\lib\tp_UDKenv</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+      <DisableSpecificWarnings>4091</DisableSpecificWarnings>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>EFI Application</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>false</DataExecutionPrevention>
+      <EnableUAC>false</EnableUAC>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Link>
+    <Lib>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <SubSystem>EFI Application</SubSystem>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="MdePkg\Library\BaseDebugLibNull\DebugLib.c" />
+    <ClCompile Include="MdePkg\Library\BaseIoLibIntrinsic\IoHighLevel.c" />
+    <ClCompile Include="MdePkg\Library\BaseIoLibIntrinsic\IoLib.c" />
+    <ClCompile Include="MdePkg\Library\BaseIoLibIntrinsic\IoLibMmioBuffer.c" />
+    <ClCompile Include="MdePkg\Library\BaseIoLibIntrinsic\IoLibMsc.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\ARShiftU64.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\BitField.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\CheckSum.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\ChkStkGcc.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\Cpu.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\CpuDeadLoop.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\DivS64x64Remainder.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\DivU64x32.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\DivU64x32Remainder.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\DivU64x64Remainder.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\GetPowerOfTwo32.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\GetPowerOfTwo64.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\HighBitSet32.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\HighBitSet64.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\LinkedList.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\LongJump.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\LowBitSet32.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\LowBitSet64.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\LRotU32.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\LRotU64.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\LShiftU64.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\Math64.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\ModU64x32.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\MultS64x64.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\MultU64x32.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\MultU64x64.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\RRotU32.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\RRotU64.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\RShiftU64.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\SetJump.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\String.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\SwapBytes16.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\SwapBytes32.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\SwapBytes64.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\SwitchStack.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\Unaligned.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\X86DisablePaging32.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\X86DisablePaging64.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\X86EnablePaging32.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\X86EnablePaging64.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\X86FxRestore.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\X86FxSave.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\X86GetInterruptState.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\X86MemoryFence.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\X86Msr.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\X86ReadGdtr.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\X86ReadIdtr.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\X86Thunk.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\X86WriteGdtr.c" />
+    <ClCompile Include="MdePkg\Library\BaseLib\X86WriteIdtr.c" />
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\CompareMemWrapper.c" />
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\CopyMem.c" />
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\CopyMemWrapper.c" />
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\MemLibGeneric.c" />
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\MemLibGuid.c" />
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\ScanMem16Wrapper.c" />
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\ScanMem32Wrapper.c" />
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\ScanMem64Wrapper.c" />
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\ScanMem8Wrapper.c" />
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\SetMem.c" />
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\SetMem16Wrapper.c" />
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\SetMem32Wrapper.c" />
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\SetMem64Wrapper.c" />
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\SetMemWrapper.c" />
+    <ClCompile Include="MdePkg\Library\BaseMemoryLib\ZeroMemWrapper.c" />
+    <ClCompile Include="MdePkg\Library\BasePeCoffGetEntryPointLib\PeCoffGetEntryPoint.c" />
+    <ClCompile Include="MdePkg\Library\BasePrintLib\PrintLib.c" />
+    <ClCompile Include="MdePkg\Library\BasePrintLib\PrintLibInternal.c" />
+    <ClCompile Include="MdePkg\Library\BaseSynchronizationLib\SynchronizationMsc.c" />
+    <ClCompile Include="MdePkg\Library\UefiBootServicesTableLib\UefiBootServicesTableLib.c" />
+    <ClCompile Include="MdePkg\Library\UefiLib\UefiLib.c" />
+    <ClCompile Include="MdePkg\Library\UefiRuntimeServicesTableLib\UefiRuntimeServicesTableLib.c" />
+    <ClCompile Include="OptionRomPkg\Library\FrameBufferBltLib\FrameBufferBltLib.c" />
+    <ClCompile Include="PcAtChipsetPkg\Library\ResetSystemLib\ResetSystemLib.c" />
+    <ClCompile Include="PcAtChipsetPkg\Library\SerialIoLib\SerialPortLib.c" />
+    <ClCompile Include="SecurityPkg\VariableAuthenticated\SecureBootConfigDxe\SecureBootConfigImpl.c" />
+    <ClCompile Include="SecurityPkg\VariableAuthenticated\SecureBootConfigDxe\SecureBootConfigMisc.c" />
+    <ClCompile Include="UDK2014.c" />
+    <ClCompile Include="UefiCpuPkg\Library\BaseXApicLib\BaseXApicLib.c" />
+    <ClCompile Include="UefiCpuPkg\Library\CpuExceptionHandlerLib\CpuExceptionCommon.c" />
+    <ClCompile Include="UefiCpuPkg\Library\CpuExceptionHandlerLib\SecPeiCpuException.c" />
+    <ClCompile Include="UefiCpuPkg\Library\SecPeiDxeTimerLibUefiCpu\X86TimerLib.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="MdePkg\Library\BaseLib\X64\CpuBreakpoint.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\CpuId.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\CpuIdEx.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\CpuPause.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\DisableCache.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\DisableInterrupts.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\DisablePaging64.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\EnableCache.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\EnableDisableInterrupts.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\EnableInterrupts.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\FlushCacheLine.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\FxRestore.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\FxSave.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\Invd.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\LongJumpAsm.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\Monitor.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\Mwait.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadCr0.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadCr2.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadCr3.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadCr4.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadCs.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDr0.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDr1.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDr2.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDr3.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDr4.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDr5.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDr6.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDr7.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadDs.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadEflags.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadEs.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadFs.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadGdtr.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadGs.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadIdtr.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadLdtr.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMm0.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMm1.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMm2.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMm3.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMm4.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMm5.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMm6.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMm7.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadMsr64.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadPmc.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadSs.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadTr.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\ReadTsc.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\SetJumpAsm.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\SwitchStackAsm.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\Wbinvd.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteCr0.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteCr2.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteCr3.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteCr4.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteDr0.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteDr1.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteDr2.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteDr3.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteDr4.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteDr5.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteDr6.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteDr7.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteGdtr.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteIdtr.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteLdtr.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMm0.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMm1.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMm2.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMm3.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMm4.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMm5.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMm6.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMm7.asm" />
+    <MASM Include="MdePkg\Library\BaseLib\X64\WriteMsr64.asm" />
+    <MASM Include="MdePkg\Library\BaseSynchronizationLib\X64\InterlockedCompareExchange32.asm" />
+    <MASM Include="MdePkg\Library\BaseSynchronizationLib\X64\InterlockedCompareExchange64.asm" />
+    <MASM Include="MdePkg\Library\BaseSynchronizationLib\X64\InterlockedDecrement.asm" />
+    <MASM Include="MdePkg\Library\BaseSynchronizationLib\X64\InterlockedIncrement.asm" />
+    <MASM Include="UefiCpuPkg\Library\CpuExceptionHandlerLib\X64\ExceptionHandlerAsm.asm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CryptoPkg\Include\Library\BaseCryptLib.h" />
+    <ClInclude Include="MdeModulePkg\Include\Guid\MdeModuleHii.h" />
+    <ClInclude Include="MdeModulePkg\Include\Library\DebugAgentLib.h" />
+    <ClInclude Include="MdeModulePkg\Include\Library\HiiLib.h" />
+    <ClInclude Include="MdeModulePkg\Include\Library\ResetSystemLib.h" />
+    <ClInclude Include="MdeModulePkg\Include\Library\UefiHiiServicesLib.h" />
+    <ClInclude Include="MdePkg\Include\Base.h" />
+    <ClInclude Include="MdePkg\Include\Guid\FileInfo.h" />
+    <ClInclude Include="MdePkg\Include\Guid\FileSystemVolumeLabelInfo.h" />
+    <ClInclude Include="MdePkg\Include\Guid\GlobalVariable.h" />
+    <ClInclude Include="MdePkg\Include\Guid\HiiFormMapMethodGuid.h" />
+    <ClInclude Include="MdePkg\Include\Guid\HiiPlatformSetupFormset.h" />
+    <ClInclude Include="MdePkg\Include\Guid\ImageAuthentication.h" />
+    <ClInclude Include="MdePkg\Include\Guid\PcAnsi.h" />
+    <ClInclude Include="MdePkg\Include\Guid\VectorHandoffTable.h" />
+    <ClInclude Include="MdePkg\Include\Guid\WinCertificate.h" />
+    <ClInclude Include="MdePkg\Include\IndustryStandard\Acpi.h" />
+    <ClInclude Include="MdePkg\Include\IndustryStandard\Acpi10.h" />
+    <ClInclude Include="MdePkg\Include\IndustryStandard\Acpi20.h" />
+    <ClInclude Include="MdePkg\Include\IndustryStandard\Acpi30.h" />
+    <ClInclude Include="MdePkg\Include\IndustryStandard\Acpi40.h" />
+    <ClInclude Include="MdePkg\Include\IndustryStandard\Acpi50.h" />
+    <ClInclude Include="MdePkg\Include\IndustryStandard\Acpi51.h" />
+    <ClInclude Include="MdePkg\Include\IndustryStandard\AcpiAml.h" />
+    <ClInclude Include="MdePkg\Include\IndustryStandard\PeImage.h" />
+    <ClInclude Include="MdePkg\Include\Library\BaseLib.h" />
+    <ClInclude Include="MdePkg\Include\Library\BaseMemoryLib.h" />
+    <ClInclude Include="MdePkg\Include\Library\DebugLib.h" />
+    <ClInclude Include="MdePkg\Include\Library\DevicePathLib.h" />
+    <ClInclude Include="MdePkg\Include\Library\IoLib.h" />
+    <ClInclude Include="MdePkg\Include\Library\PcdLib.h" />
+    <ClInclude Include="MdePkg\Include\Library\PeCoffExtraActionLib.h" />
+    <ClInclude Include="MdePkg\Include\Library\PeCoffGetEntryPointLib.h" />
+    <ClInclude Include="MdePkg\Include\Library\PeCoffLib.h" />
+    <ClInclude Include="MdePkg\Include\Library\PrintLib.h" />
+    <ClInclude Include="MdePkg\Include\Library\SerialPortLib.h" />
+    <ClInclude Include="MdePkg\Include\Library\SynchronizationLib.h" />
+    <ClInclude Include="MdePkg\Include\Library\TimerLib.h" />
+    <ClInclude Include="MdePkg\Include\Library\UefiBootServicesTableLib.h" />
+    <ClInclude Include="MdePkg\Include\Library\UefiLib.h" />
+    <ClInclude Include="MdePkg\Include\Library\UefiRuntimeServicesTableLib.h" />
+    <ClInclude Include="MdePkg\Include\Pi\PiStatusCode.h" />
+    <ClInclude Include="MdePkg\Include\Ppi\VectorHandoffInfo.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\BlockIo.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\ComponentName.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\ComponentName2.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\Cpu.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\DebugPort.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\DebugSupport.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\DevicePath.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\DriverBinding.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\DriverConfiguration.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\DriverConfiguration2.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\DriverDiagnostics.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\DriverDiagnostics2.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\FormBrowser2.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\GraphicsOutput.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\HiiConfigAccess.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\HiiConfigRouting.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\HiiDatabase.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\HiiFont.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\HiiImage.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\HiiString.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\LoadFile.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\SimpleFileSystem.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\SimpleTextIn.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\SimpleTextInEx.h" />
+    <ClInclude Include="MdePkg\Include\Protocol\SimpleTextOut.h" />
+    <ClInclude Include="MdePkg\Include\Uefi.h" />
+    <ClInclude Include="MdePkg\Include\Uefi\UefiAcpiDataTable.h" />
+    <ClInclude Include="MdePkg\Include\Uefi\UefiBaseType.h" />
+    <ClInclude Include="MdePkg\Include\Uefi\UefiGpt.h" />
+    <ClInclude Include="MdePkg\Include\Uefi\UefiInternalFormRepresentation.h" />
+    <ClInclude Include="MdePkg\Include\Uefi\UefiMultiPhase.h" />
+    <ClInclude Include="MdePkg\Include\Uefi\UefiPxe.h" />
+    <ClInclude Include="MdePkg\Include\Uefi\UefiSpec.h" />
+    <ClInclude Include="MdePkg\Include\X64\ProcessorBind.h" />
+    <ClInclude Include="MdePkg\Library\BaseIoLibIntrinsic\BaseIoLibIntrinsicInternal.h" />
+    <ClInclude Include="MdePkg\Library\BaseLib\BaseLibInternals.h" />
+    <ClInclude Include="MdePkg\Library\BaseMemoryLib\MemLibInternals.h" />
+    <ClInclude Include="MdePkg\Library\BasePrintLib\PrintLibInternal.h" />
+    <ClInclude Include="MdePkg\Library\BaseSynchronizationLib\BaseSynchronizationLibInternals.h" />
+    <ClInclude Include="MdePkg\Library\UefiLib\UefiLibInternal.h" />
+    <ClInclude Include="OptionRomPkg\Include\Library\BltLib.h" />
+    <ClInclude Include="SecurityPkg\Include\Guid\AuthenticatedVariableFormat.h" />
+    <ClInclude Include="SecurityPkg\Include\Guid\SecureBootConfigHii.h" />
+    <ClInclude Include="SecurityPkg\Include\Library\PlatformSecureLib.h" />
+    <ClInclude Include="SecurityPkg\VariableAuthenticated\SecureBootConfigDxe\SecureBootConfigImpl.h" />
+    <ClInclude Include="SecurityPkg\VariableAuthenticated\SecureBootConfigDxe\SecureBootConfigNvData.h" />
+    <ClInclude Include="UDK2014.h" />
+    <ClInclude Include="UefiCpuPkg\Include\Library\LocalApicLib.h" />
+    <ClInclude Include="UefiCpuPkg\Include\Register\LocalApic.h" />
+    <ClInclude Include="UefiCpuPkg\Library\CpuExceptionHandlerLib\CpuExceptionCommon.h" />
+    <ClInclude Include="UefiCpuPkg\Library\CpuExceptionHandlerLib\X64\ArchInterruptDefs.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

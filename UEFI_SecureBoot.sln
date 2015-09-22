@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UEFI_SecureBoot", "src\UEFI_SecureBoot.vcxproj", "{ACFAB327-D77E-4BB4-9F0E-D7728C28950A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9D2FDC69-714B-4C94-86BB-F09AC8AA2F21} = {9D2FDC69-714B-4C94-86BB-F09AC8AA2F21}
+		{D69A66BA-0AD9-4ACA-9A4D-95CB162FB849} = {D69A66BA-0AD9-4ACA-9A4D-95CB162FB849}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tp_UDKenv", "src\lib\tp_UDKenv\tp_UDKenv.vcxproj", "{9D2FDC69-714B-4C94-86BB-F09AC8AA2F21}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B12588F2-8A42-402E-8071-D28F63B94068} = {B12588F2-8A42-402E-8071-D28F63B94068}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gnu-efi", "src\lib\external\BSD\gnu-efi\gnu-efi.vcxproj", "{D69A66BA-0AD9-4ACA-9A4D-95CB162FB849}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UDK2014", "src\lib\external\BSD\UDK2014\UDK2014.vcxproj", "{B12588F2-8A42-402E-8071-D28F63B94068}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACFAB327-D77E-4BB4-9F0E-D7728C28950A}.Release|x64.ActiveCfg = Release|x64
+		{ACFAB327-D77E-4BB4-9F0E-D7728C28950A}.Release|x64.Build.0 = Release|x64
+		{9D2FDC69-714B-4C94-86BB-F09AC8AA2F21}.Release|x64.ActiveCfg = Release|x64
+		{9D2FDC69-714B-4C94-86BB-F09AC8AA2F21}.Release|x64.Build.0 = Release|x64
+		{D69A66BA-0AD9-4ACA-9A4D-95CB162FB849}.Release|x64.ActiveCfg = Release|x64
+		{D69A66BA-0AD9-4ACA-9A4D-95CB162FB849}.Release|x64.Build.0 = Release|x64
+		{B12588F2-8A42-402E-8071-D28F63B94068}.Release|x64.ActiveCfg = Release|x64
+		{B12588F2-8A42-402E-8071-D28F63B94068}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
