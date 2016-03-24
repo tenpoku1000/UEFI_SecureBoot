@@ -6,13 +6,13 @@ Microsoft 鍵を利用してマシンを起動する方法、
 自前の鍵でマシンを起動する方法と、
 セキュアブート未対応の環境での実行を提供します。
 
-今後の検討課題としては、Microsoft 鍵を利用してマシンを起動する場合の 
+今後の検討課題としては、Microsoft 鍵を利用してマシンを起動する場合の
 マシン所有者鍵(MOK: Machine Owner Keys)の自動登録の実装があります。
 
 ## 開発環境
 
 * Visual Studio Community 2015 + Windows SDK for Windows 10
-https://msdn.microsoft.com/ja-jp/windows/hardware/dn913721(v=vs.8.5).aspx
+https://msdn.microsoft.com/ja-jp/windows/hardware/hh852365.aspx
 * 64 ビット版 Windows 10
 * 64 ビット UEFI 対応 PC
 * USB メモリ
@@ -41,7 +41,7 @@ https://msdn.microsoft.com/ja-jp/windows/hardware/dn913721(v=vs.8.5).aspx
   Key Number:
 * 1⏎と入力すると、マシン所有者鍵(MOK: Machine Owner Keys)の内容が表示されます。
 * 以下のように表示されます。  
-  Key Number: 
+  Key Number:
 * 0⏎と入力すると、Enroll the key(s)? (y/n):と表示されます。 y⏎と入力すると MOK が登録されます。
 * .. を選択して⏎キーを押下します。
 * .. を選択して⏎キーを押下します。
@@ -122,9 +122,11 @@ tools フォルダに cd してから keygen.cmd を実行します。生成さ�
 
 本ソフトウェアは、以下の外部プロジェクトの成果物を利用しています。感謝いたします。
 
+### BSD License
 * shim https://mjg59.dreamwidth.org/20303.html
-* UDK2014 http://www.tianocore.org/udk2014/
 * gnu-efi http://sourceforge.net/projects/gnu-efi/
+* UDK2014 http://www.tianocore.org/udk2014/
+* EDK II http://www.tianocore.org/edk2/
 
 ## ライセンス
 
