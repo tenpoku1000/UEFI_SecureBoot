@@ -1,7 +1,7 @@
 
 // Copyright 2015 Shin'ichi Ichikawa. Released under the MIT license.
 
-#include <UDK2014.h>
+#include <UDK.h>
 #include <SecureBootConfigDxe/SecureBootConfigImpl.h>
 #include <Library/ResetSystemLib.h>
 #include <Library/BltLib.h>

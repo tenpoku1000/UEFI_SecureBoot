@@ -1,8 +1,8 @@
 
 // Copyright 2015 Shin'ichi Ichikawa. Released under the MIT license.
 
-#if ! defined(__SECURE_BOOT_MODE_H__)
-#define __SECURE_BOOT_MODE_H__
+#if ! defined(SECURE_BOOT_MODE_H_)
+#define SECURE_BOOT_MODE_H_
 
 #include "utils.h"
 

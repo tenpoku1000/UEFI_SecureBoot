@@ -93,33 +93,48 @@ static bool get_pk_and_mode_variables(bool* is_unknown_mode)
     *is_unknown_mode = false;
 
     UINT8 pk = 0;
-    if (EFI_SUCCESS != get_PK(&pk)){
 
-        error_print(L"get_PK() failed.\n");
+    EFI_STATUS status = get_PK(&pk);
+
+    if (EFI_ERROR(status)){
+
+        error_print(L"get_PK() failed.\n", &status);
     }
 
     UINT8 audit_mode = 0;
-    if (EFI_SUCCESS != get_variable(L"AuditMode", &audit_mode)){
 
-        error_print(L"get_variable(AuditMode) failed.\n");
+    status = get_variable(L"AuditMode", &audit_mode);
+
+    if (EFI_ERROR(status)){
+
+        error_print(L"get_variable(AuditMode) failed.\n", &status);
     }
 
     UINT8 deployed_mode = 0;
-    if (EFI_SUCCESS != get_variable(L"DeployedMode", &deployed_mode)){
 
-        error_print(L"get_variable(DeployedMode) failed.\n");
+    status = get_variable(L"DeployedMode", &deployed_mode);
+
+    if (EFI_ERROR(status)){
+
+        error_print(L"get_variable(DeployedMode) failed.\n", &status);
     }
 
     UINT8 setup_mode = 0;
-    if (EFI_SUCCESS != get_variable(L"SetupMode", &setup_mode)){
 
-        error_print(L"get_variable(SetupMode) failed.\n");
+    status = get_variable(L"SetupMode", &setup_mode);
+
+    if (EFI_ERROR(status)){
+
+        error_print(L"get_variable(SetupMode) failed.\n", &status);
     }
 
     UINT8 secure_boot = 0;
-    if (EFI_SUCCESS != get_variable(L"SecureBoot", &secure_boot)){
 
-        error_print(L"get_variable(SecureBoot) failed.\n");
+    status = get_variable(L"SecureBoot", &secure_boot);
+
+    if (EFI_ERROR(status)){
+
+        error_print(L"get_variable(SecureBoot) failed.\n", &status);
     }
 
 //    Print(

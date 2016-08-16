@@ -2,6 +2,7 @@
 // Copyright 2015 Shin'ichi Ichikawa. Released under the MIT license.
 
 #include "utils.h"
+#include "efi_status.h"
 
 static bool exit_boot_services = false;
 
@@ -29,14 +30,17 @@ static bool is_reboot_msg(void)
 
 void read_key(void)
 {
-    EFI_STATUS local_status = EFI_SUCCESS;
+    if (ST->ConIn){
 
-    do {
+        EFI_STATUS local_status = EFI_SUCCESS;
 
-        EFI_INPUT_KEY key;
-        local_status = ST->ConIn->ReadKeyStroke(ST->ConIn, &key);
+        do{
+            EFI_INPUT_KEY key;
 
-    } while (EFI_SUCCESS != local_status);
+            local_status = ST->ConIn->ReadKeyStroke(ST->ConIn, &key);
+
+        } while (EFI_SUCCESS != local_status);
+    }
 }
 
 void reset_system(EFI_STATUS status)
@@ -55,11 +59,16 @@ void reset_system(EFI_STATUS status)
     RT->ResetSystem(EfiResetCold, status, 0, NULL);
 }
 
-void error_print(CHAR16* msg)
+void error_print(CHAR16* msg, EFI_STATUS* status)
 {
     if (false == is_exit_boot_services()){
 
         Print(msg);
+
+        if (status){
+
+            Print(L"EFI_STATUS = %d, %s\n", *status, print_status_msg(*status));
+        }
     }
 
     reset_system(EFI_SUCCESS);

@@ -9,6 +9,7 @@
 
 static EFI_HANDLE IH = NULL;
 static EFI_GRAPHICS_OUTPUT_PROTOCOL* gop = NULL;
+static EFI_LOADED_IMAGE* loaded_image = NULL;
 
 typedef struct mem_map_ {
     UINTN memory_map_size;
@@ -55,20 +56,51 @@ static void init(EFI_HANDLE image_handle, EFI_SYSTEM_TABLE* system_table)
 
     tp_set_uefi_pointers(image_handle, system_table);
 
-    if ((NULL == ST->ConIn) || (ST->ConIn->Reset(ST->ConIn, 0) != EFI_SUCCESS)){
+    EFI_STATUS status = EFI_SUCCESS;
 
-        error_print(L"Input device unavailable.\n");
+    if ((NULL == ST->ConIn) || (EFI_SUCCESS != (status = ST->ConIn->Reset(ST->ConIn, 0)))){
+
+        error_print(L"Input device unavailable.\n", ST->ConIn ? &status : NULL);
     }
 
-    EFI_STATUS status = BS->LocateProtocol(
-        &GraphicsOutputProtocol,
-        NULL, &gop
+    status = BS->OpenProtocol(
+        image_handle, &LoadedImageProtocol, &loaded_image,
+        image_handle, NULL, EFI_OPEN_PROTOCOL_GET_PROTOCOL
     );
 
-    if (EFI_ERROR(status)) {
+    if (EFI_ERROR(status)){
 
-        error_print(L"LocateProtocol() GOP failed.\n");
+        error_print(L"OpenProtocol() LoadedImageProtocol failed.\n", &status);
     }
+
+    UINTN number_gop_handles = 0;
+    EFI_HANDLE* gop_handles = NULL;
+
+    status = BS->LocateHandleBuffer(
+        ByProtocol,
+        &GraphicsOutputProtocol,
+        NULL,
+        &number_gop_handles,
+        &gop_handles
+    );
+
+    if (EFI_ERROR(status)){
+
+        error_print(L"LocateHandleBuffer() GraphicsOutputProtocol failed.\n", &status);
+    }
+
+    status = BS->OpenProtocol(
+        gop_handles[0], &GraphicsOutputProtocol, &gop,
+        image_handle, NULL, EFI_OPEN_PROTOCOL_GET_PROTOCOL
+    );
+
+    if (EFI_ERROR(status)){
+
+        error_print(L"OpenProtocol() GraphicsOutputProtocol failed.\n", &status);
+    }
+
+    FreePool(gop_handles);
+    gop_handles = NULL;
 
     int mode_num = 0;
     int set_mode_num = 0;
@@ -101,30 +133,19 @@ static void init(EFI_HANDLE image_handle, EFI_SYSTEM_TABLE* system_table)
 
     if (false == valid_query_mode){
 
-        error_print(L"QueryMode() GOP failed.\n");
+        error_print(L"QueryMode() GOP failed.\n", NULL);
     }
 
     status = gop->SetMode(gop, set_mode_num);
 
     if (EFI_ERROR(status)){
 
-        error_print(L"SetMode() GOP failed.\n");
+        error_print(L"SetMode() GOP failed.\n", &status);
     }
 }
 
 static void boot_exec()
 {
-    EFI_LOADED_IMAGE* loaded_image = NULL;
-
-    EFI_STATUS status = BS->HandleProtocol(
-        IH, &LoadedImageProtocol, &loaded_image
-    );
-
-    if (EFI_ERROR(status)){
-
-        error_print(L"HandleProtocol() LoadedImageProtocol failed.\n");
-    }
-
     CHAR16* path = DevicePathToStr(loaded_image->FilePath);
 
     if (path){
@@ -146,7 +167,7 @@ static void boot_exec()
         path = NULL;
     }else{
 
-        error_print(L"DevicePathToStr() failed.\n");
+        error_print(L"DevicePathToStr() failed.\n", NULL);
     }
 }
 
@@ -221,15 +242,18 @@ static bool uefi_keys(
     EFI_FILE* efi_file_root = NULL;
     EFI_FILE* efi_file = NULL;
 
-    EFI_STATUS status = BS->LocateProtocol(
+    EFI_STATUS status = BS->OpenProtocol(
+        loaded_image->DeviceHandle,
         &FileSystemProtocol,
+        &efi_simple_file_system,
+        IH,
         NULL,
-        &efi_simple_file_system
+        EFI_OPEN_PROTOCOL_GET_PROTOCOL
     );
 
     if (EFI_ERROR(status)){
 
-        error_print(L"LocateProtocol() FileSystemProtocol failed.\n");
+        error_print(L"OpenProtocol() FileSystemProtocol failed.\n", &status);
     }
 
     status = efi_simple_file_system->OpenVolume(
@@ -238,7 +262,7 @@ static bool uefi_keys(
 
     if (EFI_ERROR(status)){
 
-        error_print(L"OpenVolume() failed.\n");
+        error_print(L"OpenVolume() failed.\n", &status);
     }
 
     CHAR16* path[] = {
@@ -268,7 +292,7 @@ static bool uefi_keys(
 
         if (EFI_ERROR(status)){
 
-            error_print(L"Open() failed.\n");
+            error_print(L"Open() failed.\n", &status);
         }
 
         if (UEFI_KEYS_OPEN == method){
@@ -284,7 +308,7 @@ static bool uefi_keys(
                 *db_file = efi_file;
                 break;
             default:
-                error_print(L"Bad index value.\n");
+                error_print(L"Bad index value.\n", NULL);
             }
         }
     }
@@ -298,7 +322,7 @@ static void regist_uefi_keys(void)
 
     if (EFI_ERROR(status)){
 
-        error_print(L"tp_begin_enroll_keys() failed.\n");
+        error_print(L"tp_begin_enroll_keys() failed.\n", &status);
     }
 
     EFI_FILE_HANDLE pk_file = NULL;
@@ -307,7 +331,7 @@ static void regist_uefi_keys(void)
 
     if (false == uefi_keys(UEFI_KEYS_OPEN, &pk_file, &kek_file, &db_file)){
 
-        error_print(L"uefi_keys(UEFI_KEYS_OPEN) failed.\n");
+        error_print(L"uefi_keys(UEFI_KEYS_OPEN) failed.\n", NULL);
     }
 
     CHAR16* db_file_name = L"dbself.cer";
@@ -322,7 +346,7 @@ static void regist_uefi_keys(void)
         (void)kek_file->Close(kek_file);
         (void)db_file->Close(db_file);
 
-        error_print(L"tp_enroll_uefi_key(ENROLL_UEFI_KEY_DB) failed.\n");
+        error_print(L"tp_enroll_uefi_key(ENROLL_UEFI_KEY_DB) failed.\n", &status);
     }
 
     CHAR16* kek_file_name = L"kekself.cer";
@@ -337,7 +361,7 @@ static void regist_uefi_keys(void)
         (void)kek_file->Close(kek_file);
         (void)db_file->Close(db_file);
 
-        error_print(L"tp_enroll_uefi_key(ENROLL_UEFI_KEY_KEK) failed.\n");
+        error_print(L"tp_enroll_uefi_key(ENROLL_UEFI_KEY_KEK) failed.\n", &status);
     }
 
     CHAR16* pk_file_name = L"pkself.cer";
@@ -352,7 +376,7 @@ static void regist_uefi_keys(void)
         (void)kek_file->Close(kek_file);
         (void)db_file->Close(db_file);
 
-        error_print(L"tp_enroll_uefi_key(ENROLL_UEFI_KEY_PK) failed.\n");
+        error_print(L"tp_enroll_uefi_key(ENROLL_UEFI_KEY_PK) failed.\n", &status);
     }
 
     tp_end_enroll_keys();
@@ -361,14 +385,14 @@ static void regist_uefi_keys(void)
 
     if (EFI_ERROR(status)){
 
-        error_print(L"Delete(DB) failed.\n");
+        error_print(L"Delete(DB) failed.\n", &status);
     }
 
     status = pk_file->Delete(pk_file);
 
     if (EFI_ERROR(status)){
 
-        error_print(L"Delete(PK) failed.\n");
+        error_print(L"Delete(PK) failed.\n", &status);
     }
 
     pk_file = NULL;
@@ -377,7 +401,7 @@ static void regist_uefi_keys(void)
 
     if (EFI_ERROR(status)){
 
-        error_print(L"Delete(KEK) failed.\n");
+        error_print(L"Delete(KEK) failed.\n", &status);
     }
 
     kek_file = NULL;
@@ -404,7 +428,7 @@ static void exit_boot_services(void)
 
     if (EFI_ERROR(status)){
 
-        error_print(L"AllocatePool() failed.\n");
+        error_print(L"AllocatePool() failed.\n", &status);
     }
 
     BS->SetMem(MM, sizeof(*MM), 0);
@@ -422,7 +446,7 @@ retry:
 
         if (retry){
 
-            error_print(L"ExitBootServices() faild.\n");
+            error_print(L"ExitBootServices() faild.\n", &status);
         }
 
         retry = true;
@@ -451,7 +475,7 @@ static void get_memory_map(void)
 
         if (EFI_ERROR(status)){
 
-            error_print(L"AllocatePool() failed.\n");
+            error_print(L"AllocatePool() failed.\n", &status);
         }
 
         status = BS->GetMemoryMap(
@@ -466,7 +490,7 @@ static void get_memory_map(void)
 
         if (EFI_SUCCESS != status){
 
-            error_print(L"GetMemoryMap() failed.\n");
+            error_print(L"GetMemoryMap() failed.\n", &status);
         }
 
         break;

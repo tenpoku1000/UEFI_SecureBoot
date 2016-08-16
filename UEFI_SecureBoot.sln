@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UEFI_SecureBoot", "src\UEFI_SecureBoot.vcxproj", "{ACFAB327-D77E-4BB4-9F0E-D7728C28950A}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -16,7 +16,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tp_UDKenv", "src\lib\tp_UDK
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gnu-efi", "src\lib\external\BSD\gnu-efi\gnu-efi.vcxproj", "{D69A66BA-0AD9-4ACA-9A4D-95CB162FB849}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UDK2014", "src\lib\external\BSD\UDK2014\UDK2014.vcxproj", "{B12588F2-8A42-402E-8071-D28F63B94068}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UDK", "src\lib\external\BSD\UDK\UDK.vcxproj", "{B12588F2-8A42-402E-8071-D28F63B94068}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

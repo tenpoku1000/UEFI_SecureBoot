@@ -1,8 +1,8 @@
 
 // Copyright 2015 Shin'ichi Ichikawa. Released under the MIT license.
 
-#if ! defined(__TP_UEFI_MEMORY_H__)
-#define __TP_UEFI_MEMORY_H__
+#if ! defined(TP_UEFI_MEMORY_H_)
+#define TP_UEFI_MEMORY_H_
 
 static void tp_print(CHAR16* msg)
 {

@@ -1,8 +1,8 @@
 
 // Copyright 2015 Shin'ichi Ichikawa. Released under the MIT license.
 
-#if ! defined(__SETUP_SCREEN_H__)
-#define __SETUP_SCREEN_H__
+#if ! defined(SETUP_SCREEN_H_)
+#define SETUP_SCREEN_H_
 
 #include "utils.h"
 

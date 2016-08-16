@@ -10,7 +10,7 @@
     <ProjectGuid>{ACFAB327-D77E-4BB4-9F0E-D7728C28950A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>UEFI_SecureBoot</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.10240.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -62,7 +62,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>false</DataExecutionPrevention>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>gnu-efi.lib;UDK2014.lib;tp_UDKenv.lib</AdditionalDependencies>
+      <AdditionalDependencies>gnu-efi.lib;UDK.lib;tp_UDKenv.lib</AdditionalDependencies>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
@@ -70,12 +70,14 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="efi_status.h" />
     <ClInclude Include="secure_boot_mode.h" />
     <ClInclude Include="setup_screen.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="efi_main.c" />
+    <ClCompile Include="efi_status.c" />
     <ClCompile Include="secure_boot_mode.c" />
     <ClCompile Include="setup_screen.c" />
     <ClCompile Include="utils.c" />

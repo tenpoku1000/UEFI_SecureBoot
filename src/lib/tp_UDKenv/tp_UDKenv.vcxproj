@@ -17,7 +17,7 @@
     <ProjectGuid>{9D2FDC69-714B-4C94-86BB-F09AC8AA2F21}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>tp_UDKenv</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.10240.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -49,7 +49,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <BufferSecurityCheck>false</BufferSecurityCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\src\lib\external\BSD\UDK2014;$(SolutionDir)\src\lib\external\BSD\UDK2014\MdeModulePkg\Include;$(SolutionDir)\src\lib\external\BSD\UDK2014\MdePkg\Include;$(SolutionDir)\src\lib\external\BSD\UDK2014\MdePkg\Include\X64;$(SolutionDir)\src\lib\external\BSD\UDK2014\OptionRomPkg\Include;$(SolutionDir)\src\lib\external\BSD\UDK2014\CryptoPkg\Include;$(SolutionDir)\src\lib\external\BSD\UDK2014\SecurityPkg\Include;$(SolutionDir)\src\lib\external\BSD\UDK2014\SecurityPkg\VariableAuthenticated</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\src\lib\external\BSD\UDK;$(SolutionDir)\src\lib\external\BSD\UDK\MdeModulePkg\Include;$(SolutionDir)\src\lib\external\BSD\UDK\MdePkg\Include;$(SolutionDir)\src\lib\external\BSD\UDK\MdePkg\Include\X64;$(SolutionDir)\src\lib\external\BSD\UDK\OptionRomPkg\Include;$(SolutionDir)\src\lib\external\BSD\UDK\CryptoPkg\Include;$(SolutionDir)\src\lib\external\BSD\UDK\SecurityPkg\Include;$(SolutionDir)\src\lib\external\BSD\UDK\SecurityPkg\VariableAuthenticated</AdditionalIncludeDirectories>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <DisableSpecificWarnings>4091</DisableSpecificWarnings>
     </ClCompile>
