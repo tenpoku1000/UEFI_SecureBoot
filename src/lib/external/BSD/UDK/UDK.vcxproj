@@ -47,6 +47,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <DisableSpecificWarnings>4091</DisableSpecificWarnings>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
     </ClCompile>
     <Link>
       <SubSystem>EFI Application</SubSystem>

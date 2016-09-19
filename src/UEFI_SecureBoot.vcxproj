@@ -50,6 +50,7 @@
       <AdditionalIncludeDirectories>.\lib\external\BSD\gnu-efi\inc;.\lib\external\BSD\gnu-efi\inc\x86_64;.\lib\tp_UDKenv</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <DisableSpecificWarnings>4091</DisableSpecificWarnings>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
     </ClCompile>
     <Link>
       <SubSystem>EFI Application</SubSystem>

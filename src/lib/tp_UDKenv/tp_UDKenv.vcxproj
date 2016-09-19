@@ -52,6 +52,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)\src\lib\external\BSD\UDK;$(SolutionDir)\src\lib\external\BSD\UDK\MdeModulePkg\Include;$(SolutionDir)\src\lib\external\BSD\UDK\MdePkg\Include;$(SolutionDir)\src\lib\external\BSD\UDK\MdePkg\Include\X64;$(SolutionDir)\src\lib\external\BSD\UDK\OptionRomPkg\Include;$(SolutionDir)\src\lib\external\BSD\UDK\CryptoPkg\Include;$(SolutionDir)\src\lib\external\BSD\UDK\SecurityPkg\Include;$(SolutionDir)\src\lib\external\BSD\UDK\SecurityPkg\VariableAuthenticated</AdditionalIncludeDirectories>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <DisableSpecificWarnings>4091</DisableSpecificWarnings>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
