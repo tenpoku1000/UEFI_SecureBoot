@@ -5,6 +5,7 @@
 #include "setup_screen.h"
 #include "tp_UDKenv.h"
 
+#define EFI_RUNTIME_NOT_USE_AFTER_EXITBOOTSERVICES 1
 #define SCREEN_WIDTH 1024
 
 static EFI_HANDLE IH = NULL;
@@ -19,7 +20,7 @@ typedef struct mem_map_ {
     UINT32 descriptor_version;
 }mem_map;
 
-static mem_map* MM = NULL;
+static mem_map MM = { 0 };
 
 typedef enum UEFI_KEYS_{
     UEFI_KEYS_EXISTS,
@@ -419,19 +420,21 @@ static void boot_common(void)
 
     exit_boot_services();
 
+#if EFI_RUNTIME_NOT_USE_AFTER_EXITBOOTSERVICES
     tp_reset_cold();
+#else
+    EFI_STATUS status = RT->ResetSystem(EfiResetCold, EFI_SUCCESS, 0, NULL);
+
+    if (EFI_ERROR(status)){
+
+        return;
+    }
+#endif
 }
 
 static void exit_boot_services(void)
 {
-    EFI_STATUS status = BS->AllocatePool(EfiLoaderData, sizeof(*MM), &MM);
-
-    if (EFI_ERROR(status)){
-
-        error_print(L"AllocatePool() failed.\n", &status);
-    }
-
-    BS->SetMem(MM, sizeof(*MM), 0);
+    BS->SetMem(&MM, sizeof(MM), 0);
 
     bool retry = false;
 
@@ -440,7 +443,29 @@ retry:
 
     get_memory_map();
 
-    status = BS->ExitBootServices(IH, MM->map_key);
+    UINTN num = MM.memory_map_size / MM.descriptor_size;
+
+    EFI_MEMORY_DESCRIPTOR* memory_map = MM.memory_map;
+
+    for (UINTN i = 0; num > i; ++i){
+
+        // UEFI 2.6 Specification
+        //
+        // 2.3.4 x64 Platforms
+        // 
+        // Any UEFI memory descriptor that requests a virtual mapping via the
+        // EFI_MEMORY_DESCRIPTOR having the EFI_MEMORY_RUNTIME bit set must be aligned
+        // on a 4 KiB boundary and must be a multiple of 4 KiB in size.
+        //
+        if (memory_map->Attribute & EFI_MEMORY_RUNTIME){
+
+            memory_map->VirtualStart = memory_map->PhysicalStart;
+        }
+
+        memory_map = (EFI_MEMORY_DESCRIPTOR*)(((UINT8*)memory_map) + MM.descriptor_size);
+    }
+
+    EFI_STATUS status = BS->ExitBootServices(IH, MM.map_key);
 
     if (EFI_ERROR(status)){
 
@@ -457,21 +482,35 @@ retry:
     BS = NULL;
 
     set_exit_boot_services();
+
+    status = RT->SetVirtualAddressMap(
+        MM.memory_map_size,
+        MM.descriptor_size,
+        MM.descriptor_version,
+        MM.memory_map
+    );
+
+    if (EFI_ERROR(status)){
+
+        tp_reset_cold();
+
+        return;
+    }
 }
 
 static void get_memory_map(void)
 {
-    MM->memory_map_size = 0;
+    MM.memory_map_size = 0;
 
     for (;;){
 
-        if (MM->memory_map){
+        if (MM.memory_map){
 
-            FreePool(MM->memory_map);
-            MM->memory_map = NULL;
+            FreePool(MM.memory_map);
+            MM.memory_map = NULL;
         }
 
-        EFI_STATUS status = BS->AllocatePool(EfiLoaderData, MM->memory_map_size, &MM->memory_map);
+        EFI_STATUS status = BS->AllocatePool(EfiLoaderData, MM.memory_map_size, &MM.memory_map);
 
         if (EFI_ERROR(status)){
 
@@ -479,8 +518,8 @@ static void get_memory_map(void)
         }
 
         status = BS->GetMemoryMap(
-            &MM->memory_map_size, MM->memory_map,
-            &MM->map_key, &MM->descriptor_size, &MM->descriptor_version
+            &MM.memory_map_size, MM.memory_map,
+            &MM.map_key, &MM.descriptor_size, &MM.descriptor_version
         );
 
         if (EFI_BUFFER_TOO_SMALL == status){
