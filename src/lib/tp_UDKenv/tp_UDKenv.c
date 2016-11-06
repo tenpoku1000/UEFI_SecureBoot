@@ -4,6 +4,7 @@
 #include <UDK.h>
 #include <SecureBootConfigDxe/SecureBootConfigImpl.h>
 #include <Library/ResetSystemLib.h>
+#include <Library/IoLib.h>
 #include <Library/BltLib.h>
 #include "tp_UDKenv.h"
 #include "tp_uefi_memory.h"
@@ -134,6 +135,7 @@ void tp_end_enroll_keys(void)
 void tp_reset_cold(void)
 {
     ResetCold();
+    IoWrite8(0xcf9, 0x0e);
 }
 
 EFI_STATUS tp_blt_lib_configure(

@@ -18,12 +18,18 @@
     <ClCompile Include="tp_UDKenv.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="tp_draw_logo.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tp_UDKenv.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="tp_uefi_memory.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="tp_draw_logo.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

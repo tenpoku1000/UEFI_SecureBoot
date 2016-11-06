@@ -19,7 +19,13 @@ WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED.
 #if ! defined(UDK_H_)
 #define UDK_H_
 
-#include <Uefi/UefiBaseType.h>
+#include <Uefi.h>
+#include <Library/BaseLib.h>
+#include <Library/BaseMemoryLib.h>
+#include <Library/PrintLib.h>
+#include <Library/UefiBootServicesTableLib.h>
+#include <Library/UefiRuntimeServicesTableLib.h>
+#include <Protocol/SimpleFileSystem.h>
 
 extern EFI_GUID gEfiDebugAgentGuid;
 extern EFI_GUID gEfiFirmwareFileSystem2Guid;

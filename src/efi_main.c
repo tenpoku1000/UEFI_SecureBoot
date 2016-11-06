@@ -4,6 +4,7 @@
 #include "secure_boot_mode.h"
 #include "setup_screen.h"
 #include "tp_UDKenv.h"
+#include "tp_draw_logo.h"
 
 #define EFI_RUNTIME_NOT_USE_AFTER_EXITBOOTSERVICES 1
 #define SCREEN_WIDTH 1024
@@ -43,6 +44,8 @@ static void get_memory_map(void);
 EFI_STATUS efi_main(EFI_HANDLE image_handle, EFI_SYSTEM_TABLE* system_table)
 {
     init(image_handle, system_table);
+
+    tp_draw_logo(gop);
 
     boot_exec();
 

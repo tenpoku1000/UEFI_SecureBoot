@@ -247,6 +247,7 @@
     <ClInclude Include="MdeModulePkg\Include\Library\ResetSystemLib.h" />
     <ClInclude Include="MdeModulePkg\Include\Library\UefiHiiServicesLib.h" />
     <ClInclude Include="MdePkg\Include\Base.h" />
+    <ClInclude Include="MdePkg\Include\Guid\Acpi.h" />
     <ClInclude Include="MdePkg\Include\Guid\FileInfo.h" />
     <ClInclude Include="MdePkg\Include\Guid\FileSystemVolumeLabelInfo.h" />
     <ClInclude Include="MdePkg\Include\Guid\GlobalVariable.h" />
@@ -264,6 +265,7 @@
     <ClInclude Include="MdePkg\Include\IndustryStandard\Acpi50.h" />
     <ClInclude Include="MdePkg\Include\IndustryStandard\Acpi51.h" />
     <ClInclude Include="MdePkg\Include\IndustryStandard\AcpiAml.h" />
+    <ClInclude Include="MdePkg\Include\IndustryStandard\Bmp.h" />
     <ClInclude Include="MdePkg\Include\IndustryStandard\PeImage.h" />
     <ClInclude Include="MdePkg\Include\Library\BaseLib.h" />
     <ClInclude Include="MdePkg\Include\Library\BaseMemoryLib.h" />

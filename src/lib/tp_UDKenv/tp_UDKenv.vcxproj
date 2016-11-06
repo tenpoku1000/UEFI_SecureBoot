@@ -7,9 +7,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="tp_draw_logo.c" />
     <ClCompile Include="tp_UDKenv.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="tp_draw_logo.h" />
     <ClInclude Include="tp_UDKenv.h" />
     <ClInclude Include="tp_uefi_memory.h" />
   </ItemGroup>
